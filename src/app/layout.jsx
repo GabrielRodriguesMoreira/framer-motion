@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
             </head>
             <body className={inter.className}>
-              <main className='h-screen w-screen bg-gray-100 dark:bg-gray-800 transition-colors'>
+              <main className='h-screen w-screen bg-yellow-50 dark:bg-gray-800 transition-colors'>
                 <Header />
                 {children}
                 </main>
