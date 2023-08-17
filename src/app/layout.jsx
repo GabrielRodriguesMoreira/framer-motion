@@ -2,7 +2,7 @@ import '@radix-ui/themes/styles.css';
 import Header from './components/header'
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import SideBarra from './components/sidebar.jsx';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -14,13 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-            </head>
-            <body className={inter.className}>
-              <main className='h-screen w-screen bg-yellow-50 dark:bg-gray-800 transition-colors'>
-                <Header />
-                {children}
-                </main>
-            </body>
-          </html>
-          )
+      </head>
+      <body className={inter.className}>
+        <main className='h-screen w-screen bg-yellow-50 dark:bg-gray-800 transition-colors'>
+          <Header />
+<SideBarra />
+          {children}
+        </main>
+      </body>
+    </html>
+  )
 }
