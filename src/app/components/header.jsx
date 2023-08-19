@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Switch } from '@radix-ui/react-switch';
 import Loading from "../loading";
+import SideBarra from './sidebar.jsx';
 
 export default function Header() {
     const [isDarkMode, setDarkMode] = useState(false);
     const [isLoading, setIsLoading] = useState(true)
+    const [sideBarOpen, setSideBarOpen] = useState(false);
     useEffect(() => {
         if (localStorage.getItem('theme') == 'true') {
             document.body.classList.add('dark');
@@ -40,6 +42,10 @@ export default function Header() {
         },
     };
 
+    function toggleSideBar(){
+        setSideBarOpen(!sideBarOpen)
+    }
+
     return (
         <header className=" flex justify-between fixed w-full items-center p-6">
             {isLoading ? (
@@ -61,11 +67,12 @@ export default function Header() {
                             <span className={`${isDarkMode ? ' translate-x-5 bg-black text-gray-300' : ' text-yellow-400 translate-x-1 bg-white'
                                 } flex justify-center items-center w-5 h-5 transform rounded-full transition-transform`} >    {isDarkMode ? <MoonIcon className="h-3 w-3" /> : <SunIcon className="h-3 w-3" />}</span>
                         </Switch>
-                        <HamburgerMenuIcon />
+                        <HamburgerMenuIcon className="cursor-pointer" onClick={toggleSideBar} />
                     </motion.ul>
+                    {sideBarOpen && <SideBarra closeSidebar={toggleSideBar} /> }
+                    
                 </>
             )}
-
         </header>
     )
 }
