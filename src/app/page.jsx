@@ -24,7 +24,7 @@ export default function Home() {
       <section className='flex items-center'>
         <div className="w-1/3">
           <h1 className="text-4xl font-bold text-yellow-400 mb-2">Welcome to Our Confectionery</h1>
-          <p className="text-lg text-gray-800">"Life is short. Eat dessert first." - Ernestine Ulmer</p>
+          <p className="text-lg text-gray-800">Life is short. Eat dessert first. - Ernestine Ulmer</p>
         </div>
         <div className="w-2/3 flex justify-center items-center space-x-2">
           <img className="w-3/12" src="https://pbs.twimg.com/media/F3mfn2Ia4AMxU6e?format=png&name=360x360" alt="" />
