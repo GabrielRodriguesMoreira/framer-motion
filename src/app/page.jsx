@@ -1,6 +1,4 @@
 import { StarFilledIcon, StarIcon } from '@radix-ui/react-icons';
-
-
 export default function Home() {
 
   const list = [{
@@ -52,7 +50,7 @@ export default function Home() {
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">Discover Our Story</h2>
           <p className="text-lg text-gray-700">
-            At our confectionery, we're passionate about crafting delightful treats that bring joy to your taste buds.
+            At our confectionery, were passionate about crafting delightful treats that bring joy to your taste buds.
             Join us on a journey through flavors and experiences that will leave you craving for more.
           </p>
         </div>
