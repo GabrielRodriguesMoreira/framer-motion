@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" />
       </head>
       <body className={inter.className}>
-        <main className='h-screen w-screen bg-yellow-50 dark:bg-gray-800 transition-colors'>
-          <Header />
-
+      <Header />
+        <main className=' dark:bg-amber-950 transition-colors'>
           {children}
         </main>
       </body>
